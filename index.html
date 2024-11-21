@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho de Compra</title>
+  <style>
+    body{
+      background-color: antiquewhite;
+    }
+    #login-area {
+      background-color: blanchedalmond;
+    }
+    a{
+      color: black;
+    }
+   .product-card {
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  }
+  .product-image {
+    max-width: 100%;
+    height: auto;
+  }
+  #cart {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  #cart .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  #cart .cart-item img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+  }
+  #cart .quantity-controls {
+    display: flex;
+  }
+  #cart .quantity-controls button {
+    margin: 0 5px;
+  }
+  #cart-total {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  #cart ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  </style>
+</head>
+
+<body>
+
+  <div id="login-area">
+    <h1>Login</h1>
+    <input type="text" id="username" placeholder="Usuário">
+    <input type="password" id="password" placeholder="Senha">
+    <button onclick="login()">Login</button>
+    <a href="#" onclick="showRegistration()">Criar Conta</a>
+  </div>
+
+  <div id="registration-area" style="display: none;">
+    <h1>Cadastro</h1>
+    <input type="text" id="reg-username" placeholder="Usuário">
+    <input type="password" id="reg-password" placeholder="Senha">
+    <button onclick="register()">Registrar</button>
+  </div>
+
+  <div id="product-area" style="display: none;">
+    <h1>Cadastro de Produtos</h1>
+    <input type="text" id="product-name" placeholder="Nome do produto">
+    <input type="number" id="product-price" placeholder="Preço">
+    <button onclick="addProduct()">Adicionar Produto</button>
+    <ul id="product-list"></ul>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <h3>Clique no botão abaixo e descubra as suas futuras compras:</h3>
+
+  <button id="showProducts">Mostrar Produtos</button>
+
+  <div id="productContainer"></div>
+
+  <div id="cart">
+
+    <h2>Carrinho de Compras</h2>
+
+    <button id="clearCart">Limpar Carrinho</button>
+
+    <ul id="cartList"></ul>
+
+    <button id="buyCart">Comprar</button>
+  </div>
+
+  <script src="projetocarrinho.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
